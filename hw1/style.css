@@ -1,0 +1,394 @@
+.target{
+  height: 500px;
+  width: 1000px;
+  border-radius: 2%;
+  background-color: #202124;
+  display: flex;
+  flex-wrap: wrap;
+  font: 'Noto Sans Traditional Chinese', sans serif;
+}
+
+.target > div{
+  border-radius: 3%;
+}
+
+.main-win > div{
+  border-radius: 3%;
+}
+
+.win > div{
+  border-radius: 5%;
+}
+
+.func-bar > div{
+  border-radius: 3%;
+}
+
+.main-win{
+  height: 80%;
+  width: 65%;
+  /*border: 2px solid green;*/
+  display: flex;
+  position: relative;
+  top: 5%;
+  left: 2.5%;
+  transform: translate(-2.5%, -5%);
+}
+
+#main-window{
+  height: 95%;
+  width: 95%;
+  /*border: 1px solid yellow;*/
+  background-color: #202124;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 1150%;
+  color: white;
+  font-size: 2rem;
+  display: none;
+}
+
+#main-user{
+  height: 32%;
+  width: 20%;
+  border-radius: 50%;
+  /*border: 5px solid yellow;*/
+  background-color: #33691d;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 380%;
+  color: white;
+  font-size: 2rem;
+}
+
+#main-pin{
+  height: 8%;
+  width: 5%;
+  /*border: 2px solid yellow;*/
+  position: relative;
+  top: 93%;
+  left: -18%;
+}
+
+.main-win > #main-mute{
+  height: 8%;
+  width: 5%;
+  /*border: 2px solid yellow;*/
+  position: relative;
+  top: 4%;
+  left: 65%;
+}
+
+#main-mute > #img-mute{
+  height: 40%;
+  width: 40%;
+}
+#main-mute > #img-unmute{
+  height: 40%;
+  width: 40%;
+}
+
+
+#img-mute{
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#img-unmute{
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#img-pin{
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#main-name{
+  height: 8%;
+  width: 5%;
+  /*border: 2px solid yellow;*/
+  position: relative;
+  top: 93%;
+  left: -23%;
+  text-align: center;
+  line-height: 230%;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.win{
+  height: 70%;
+  width: 30%;
+  /*border: 2px solid green;*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  left: 4.5%;
+  top: 15%;
+  transform: translate(-4.5%, -5%);
+}
+
+.win > div{
+  height: 30%;
+  width: 45%;
+  /*border: 1px solid yellow;*/
+  background-color: #3c4043;
+  position: relative;
+  top: 1%;
+  text-align: center;
+  line-height: 350%;
+  color: white;
+  font-size: 2rem;
+}
+
+#window5{
+  height: 30%;
+  width: 65%;
+}
+
+#btm-m{
+  height: 16%;
+  width: 14%;
+  border-radius: 50%;
+  /*border: 1px solid yellow;*/
+  position: relative;
+  top: -105%;
+  left: 82%;
+  text-align: center;
+  line-height: 190%;
+  color: white;
+  font-size: 1rem;
+}
+#btm-name{
+  height: 5%;
+  width: 50%;
+  /*border: 1px solid yellow;*/
+  position: relative;
+  top: -44%;
+  left: 5%;
+  text-align: left;
+  line-height: 130%;
+  color: white;
+  font-size: 0.8rem;
+}
+
+#window5 > #btm-m{
+  height: 16%;
+  width: 10%;
+  top: -103%;
+  left: 87%;
+}
+#window5 > #btm-name{
+  height: 16%;
+  width: 50%;
+  top: -43%;
+  left: 5%;
+}
+
+#win-user{
+  height: 50%;
+  width: 40%;
+  background-color: #c2175b;
+  border-radius: 50%;
+  position: relative;
+  top: -105%;
+  left: 30%;
+  text-align: center;
+  line-height: 400%;
+  color: white;
+  font-size: 0.8rem;
+}
+
+#window5 > #win-user{
+  line-height: 470%;
+  height: 55%;
+  width: 30%;
+  top: -113%;
+  left: 35%;
+  background-color: #0097a7;
+}
+
+#window1 > #win-user{
+  background-color: #ed6100;
+}
+#window4 > #win-user{
+  background-color: #ed6100;
+}
+
+
+
+.func-bar{
+  height: 15%;
+  width: 100%;
+  /*border: 2px solid green;*/
+  display: flex;
+  justify-content: space-around;
+}
+
+#bar1{
+  height: 40%;
+  width: 20%;
+  /*border: 1px solid yellow;*/
+  text-align: left;
+  line-height: 180%;
+  align-self: center;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  left: -2%;
+}
+#bar2{
+  height: 60%;
+  width: 25%;
+  /*border: 1px solid yellow;*/
+  text-align: center;
+  line-height: 100%;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#bar2 > div{
+  height: 72%;
+  width: 13%;
+  border-radius: 50%;
+  /*border: 1px solid yellow;*/
+  position: relative;
+  top: 10%;
+  text-align: center;
+  line-height: 200%;
+  color: white;
+  font-size: 1rem;
+  background-color: #3c4043;
+}
+#bar2 > #btm6{
+  height: 72%;
+  width: 17%;
+  border-radius: 40%;
+  /*border: 1px solid yellow;*/
+  position: relative;
+  top: 10%;
+  text-align: center;
+  line-height: 200%;
+  color: white;
+  font-size: 1rem;
+  background-color: #ea4336;
+}
+
+
+#bar2 > #btm1{
+  background-color: #ea4336;
+}
+#btm1-img{
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#btm2-img{
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bar2 > #btm2{
+  background-color: #ea4336;
+}
+#btm3-img{
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  left: 47%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#btm4-img{
+  height: 25%;
+  width: 25%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#box{
+  height: 40%;
+  width: 50%;
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 10%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#btm5-img{
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#btm6-img{
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#bar3{
+  height: 40%;
+  width: 20%;
+  /*border: 1px solid yellow;*/
+  text-align: center;
+  line-height: 100%;
+  align-self: center;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  left: 3%;
+}
+
+#bar3 > div{
+  height: 72%;
+  width: 11%;
+  border-radius: 50%;
+  /*border: 1px solid yellow;*/
+  position: relative;
+  top: 10%;
+  text-align: center;
+  line-height: 140%;
+  color: white;
+  font-size: 1rem;
+}
