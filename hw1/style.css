@@ -72,29 +72,55 @@
   width: 5%;
   /*border: 2px solid yellow;*/
   position: relative;
-  top: 93%;
+  top: 92%;
   left: -18%;
 }
+#img-pin{
+  height: 70%;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#exp-pin{
+  height: 80%;
+  width: 120%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -60%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#main-pin:hover #exp-pin{
+  opacity: 80%;
+}
 
-.main-win > .main-mute{
+
+#main-mute{
   height: 8%;
   width: 5%;
-  /*border: 2px solid yellow;*/
+  border: 2px solid yellow;
   position: relative;
-  top: 4%;
+  top: 8%;
   left: 65%;
 }
-
-.main-mute > #img-mute{
+#main-mute > #img-mute{
   height: 40%;
   width: 40%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /*border: 1px solid yellow;*/
+  /*border: 1px solid green;*/
 }
-.main-mute > #img-unmute{
+#main-mute > #img-unmute{
   height: 40%;
   width: 40%;
   position: absolute;
@@ -102,16 +128,24 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.change-mute{
+#main-mute > input{
   position: absolute;
-  
+  left: 40%;
+  top: 40%;
+  transform: translate(-40%, -45%);
+  z-index: 10;
 }
-.main-mute input[type="checkbox"]{
+/*
+#main-mute input[type="checkbox"]{
   visibility: hidden;
 }
-.change-mute input[type="checkbox"]:checked{
+*/
+#main-mute input[type="checkbox"]:checked{
   opacity: 100%;
+  left: 40%;
+  top: 40%;
 }
+
 
 #img-mute{
   height: 40%;
@@ -130,14 +164,42 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#img-pin{
-  height: 60%;
-  width: 60%;
+
+#exp-mute{
+  height: 40%;
+  width: 120%;
+  border-radius: 10%;
+  background-color: #979da1;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: -40%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 100%;
 }
+#exp-unmute{
+  height: 40%;
+  width: 120%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -40%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 100%;
+}
+
+
+
+
+
 
 #main-name{
   height: 8%;
@@ -386,6 +448,25 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+#exp-func1-1{
+  height: 70%;
+  width: 120%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -80%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar2 > #btm1:hover #exp-func1-1{
+  opacity: 80%;
+}
+
 #btm1-2-img{
   height: 80%;
   width: 80%;
@@ -394,10 +475,28 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
 #bar2 > #btm1-2{
   background-color: #ea4336;
 }
+#exp-func1-2{
+  height: 70%;
+  width: 160%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -80%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar2 > #btm2:hover #exp-func1-2{
+  opacity: 80%;
+}
+
 #btm1-3-img{
   height: 60%;
   width: 60%;
@@ -405,6 +504,24 @@
   left: 47%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+#exp-func1-3{
+  height: 70%;
+  width: 250%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -80%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar2 > #btm3:hover #exp-func1-3{
+  opacity: 80%;
 }
 #btm1-4-img{
   height: 25%;
@@ -414,6 +531,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 #box{
   height: 40%;
   width: 50%;
@@ -424,6 +542,24 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+#exp-func1-4{
+  height: 70%;
+  width: 260%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -80%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar2 > #btm4:hover #exp-func1-4{
+  opacity: 80%;
+}
 #btm1-5-img{
   height: 40%;
   width: 40%;
@@ -432,6 +568,24 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+#exp-func1-5{
+  height: 70%;
+  width: 200%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -80%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar2 > #btm5:hover #exp-func1-5{
+  opacity: 80%;
+}
 #btm1-6-img{
   height: 60%;
   width: 60%;
@@ -439,6 +593,24 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+#exp-func1-6{
+  height: 70%;
+  width: 160%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -80%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 150%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar2 > #btm6:hover #exp-func1-6{
+  opacity: 80%;
 }
 
 #bar3{
@@ -491,12 +663,31 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+#exp-func2-1{
+  height: 90%;
+  width: 170%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -110%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 120%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar3 > #btm1:hover #exp-func2-1{
+  opacity: 80%;
+}
+
 #btm2-2-img{
   height: 100%;
   width: 100%;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 57%;
   transform: translate(-50%, -50%);
 }
 #circle2{
@@ -506,28 +697,58 @@
   background-color: #5f6367;
   border-radius: 50%;
   left: 70%;
-  top: -50%;
+  top: -30%;
   font-size: 0.4rem;
   text-align: center;
   line-height: 170%;
   color: white;
 }
+#exp-func2-2{
+  height: 90%;
+  width: 360%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -110%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 120%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar3 > #btm2:hover #exp-func2-2{
+  opacity: 80%;
+}
+
 #btm2-3-img{
   height: 100%;
   width: 100%;
   position: absolute;
-  left: 50%;
+  left: 60%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#btm2-3-img{
-  height: 100%;
-  width: 100%;
+#exp-func2-3{
+  height: 90%;
+  width: 340%;
+  border-radius: 10%;
+  background-color: #979da1;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: -110%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 120%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
 }
+#bar3 > #btm3:hover #exp-func2-3{
+  opacity: 80%;
+}
+
 #triangle-out{
   height: 20%;
   width: 0%;
@@ -571,6 +792,25 @@
   background-color: #202124;
   border: 1.5px solid white;
 }
+#exp-func2-4{
+  height: 90%;
+  width: 220%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -110%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 120%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar3 > #btm4:hover #exp-func2-4{
+  opacity: 80%;
+}
+
 #btm2-5-1-img{
   height: 100%;
   width: 100%;
@@ -597,4 +837,22 @@
   left: 40%;
   top: 50%;
   z-index: 2;
+}
+#exp-func2-5{
+  height: 90%;
+  width: 280%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -110%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 120%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#bar3 > #btm5:hover #exp-func2-5{
+  opacity: 80%;
 }
