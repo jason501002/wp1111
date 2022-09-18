@@ -103,22 +103,21 @@
 }
 
 
-#main-mute{
+#main-mute {
   height: 8%;
   width: 5%;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   position: relative;
   top: 8%;
   left: 65%;
 }
-#main-mute > #img-mute{
+/* #main-mute > #img-mute{
   height: 40%;
   width: 40%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /*border: 1px solid green;*/
 }
 #main-mute > #img-unmute{
   height: 40%;
@@ -127,24 +126,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-#main-mute > input{
-  position: absolute;
-  left: 40%;
-  top: 40%;
-  transform: translate(-40%, -45%);
-  z-index: 10;
-}
-/*
-#main-mute input[type="checkbox"]{
-  visibility: hidden;
-}
-*/
-#main-mute input[type="checkbox"]:checked{
-  opacity: 100%;
-  left: 40%;
-  top: 40%;
-}
+} */
 
 
 #img-mute{
@@ -165,39 +147,67 @@
   transform: translate(-50%, -50%);
 }
 
+
+.c-switch{
+  display: none;
+}
+.c-switch + label > #img-unmute{
+  display: none;
+}
+.c-switch + label > #img-mute{
+  display: inline;
+}
+.c-switch:checked + label > #img-mute{
+  display: none;
+}
+.c-switch:checked + label > #img-unmute{
+  display: inline;
+}
+
 #exp-mute{
-  height: 40%;
+  height: 50%;
   width: 120%;
   border-radius: 10%;
   background-color: #979da1;
   position: absolute;
   left: 50%;
-  top: -40%;
+  top: -30%;
   transform: translate(-50%, -10%);
   text-align: center;
-  line-height: 150%;
+  line-height: 100%;
   color: white;
   font-size: 1rem;
-  opacity: 100%;
+  opacity: 0%;
 }
 #exp-unmute{
-  height: 40%;
-  width: 120%;
+  height: 50%;
+  width: 170%;
   border-radius: 10%;
   background-color: #979da1;
   position: absolute;
   left: 50%;
-  top: -40%;
+  top: -30%;
   transform: translate(-50%, -10%);
   text-align: center;
-  line-height: 150%;
+  line-height: 100%;
   color: white;
   font-size: 1rem;
-  opacity: 100%;
+  opacity: 0%;
 }
 
 
-
+#main-mute:hover .c-switch + label  > #exp-unmute{
+  opacity: 80%;
+}
+#main-mute:hover .c-switch + label  > #exp-mute{
+  opacity: 0%;
+}
+#main-mute:hover .c-switch:checked + label > #exp-unmute{
+  opacity: 0%;
+}
+#main-mute:hover .c-switch:checked + label > #exp-mute{
+  opacity: 80%;
+}
 
 
 
@@ -223,39 +233,117 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
 }
 
-#more-func > #img-pin{
-  height: 95%;
-  width: 30%;
-  position: absolute;
-  left: 20%;
-  top: 58%;
-  transform: translate(-50%, -50%);
-}
-#more-func > #img-item{
-  height: 85%;
-  width: 30%;
-  position: absolute;
-  left: 50%;
-  top: 58%;
-  transform: translate(-50%, -50%);
-}
-#more-func > #img-slash{
-  height: 80%;
-  width: 25%;
-  position: absolute;
-  left: 50%;
-  top: 58%;
-  transform: translate(-50%, -50%);
-}
-#more-func > #img-shrink{
+#more-func1{
   height: 90%;
-  width: 25%;
+  width: 30%;
+  /* border: 2px solid #0097a7; */
+}
+#more-func1 > #img-pin{
+  height: 90%;
+  width: 30%;
+  /*border: 2px solid #0057a5;*/
   position: absolute;
-  left: 80%;
+  top: 55%;
+  left: 18%;
+}
+#more-func1 > #exp-func0-1{
+  height: 50%;
+  width: 30%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  top: -50%;
+  left: 18%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 100%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#more-func1:hover #exp-func0-1{
+  opacity: 80%;
+}
+
+#more-func2{
+  height: 90%;
+  width: 30%;
+  /*border: 2px solid #0097a7;*/
+  position: absolute;
+  top: 0%;
+  left: 33%;
+}
+#more-func2 > #img-item{
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+#more-func2 > #img-slash{
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+#more-func2 > #exp-func0-2{
+  height: 55%;
+  width: 180%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  top: -55%;
+  left: 60%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 100%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#more-func2:hover #exp-func0-2{
+  opacity: 80%;
+}
+
+#more-func3{
+  height: 90%;
+  width: 30%;
+  /* border: 2px solid #0097a7; */
+  position: absolute;
+  top: 0%;
+  left: 66%;
+}
+#more-func3 > #img-shrink{
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  left: 55%;
   top: 58%;
   transform: translate(-50%, -50%);
+}
+#more-func3 > #exp-func0-3{
+  height: 55%;
+  width: 180%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  top: -55%;
+  left: 60%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 100%;
+  color: white;
+  font-size: 1rem;
+  opacity: 0%;
+}
+#more-func3:hover #exp-func0-3{
+  opacity: 80%;
 }
 
 #more-func{
@@ -372,6 +460,80 @@
 #window4 > #win-user{
   background-color: #ed6100;
 }
+
+
+.win input{
+  display: none;
+  position: absolute;
+  left: 10%;
+}
+.win input + label > #img-unmute{
+  display: none;
+}
+.win input + label > #img-mute{
+  display: inline;
+}
+.win input:checked + label > #img-mute{
+  display: none;
+}
+.win input:checked + label > #img-unmute{
+  display: inline;
+}
+
+.win #exp-mute{
+  height: 50%;
+  width: 120%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -30%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 100%;
+  color: white;
+  font-size: 0.5rem;
+  opacity: 0%;
+}
+.win #exp-unmute{
+  height: 50%;
+  width: 170%;
+  border-radius: 10%;
+  background-color: #979da1;
+  position: absolute;
+  left: 50%;
+  top: -30%;
+  transform: translate(-50%, -10%);
+  text-align: center;
+  line-height: 100%;
+  color: white;
+  font-size: 0.5rem;
+  opacity: 0%;
+}
+
+
+.win #btm-m:hover input + label  > #exp-unmute{
+  opacity: 80%;
+}
+.win #btm-m:hover input + label  > #exp-mute{
+  opacity: 0%;
+}
+.win #btm-m:hover input:checked + label > #exp-unmute{
+  opacity: 0%;
+}
+.win #btm-m:hover input:checked + label > #exp-mute{
+  opacity: 80%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
