@@ -16,7 +16,7 @@
   border-radius: 3%;
 }
 
-.win > div{
+.sub-win > div{
   border-radius: 5%;
 }
 
@@ -24,7 +24,7 @@
   border-radius: 3%;
 }
 
-.main-win{
+#main-wins{
   height: 85%;
   width: 65%;
   /* border: 2px solid green; */
@@ -33,12 +33,15 @@
   top: 5%;
   left: 2.5%;
   transform: translate(-2.5%, -5%);
+  display: flex;
 }
 
-#main-window{
+
+
+.main-win > .win{
   height: 95%;
   width: 95%;
-  /*border: 1px solid yellow;*/
+  /* border: 1px solid yellow; */
   background-color: #202124;
   position: relative;
   top: 50%;
@@ -47,82 +50,52 @@
   text-align: center;
   line-height: 1150%;
   color: white;
-  font-size: 2rem;
-  display: none;
+  font-size: 1.5rem;
 }
 
-#main-user{
+.main-win > .win > .win-class-user{
   height: 30%;
   width: 20%;
   border-radius: 50%;
-  /*border: 5px solid yellow;*/
-  background: #33691d;
-  background-color: #33691d;
-  position: relative;
+  /* border: 5px solid yellow; */
+  /* background-color: #33691d; */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  line-height: 310%;
+  /* text-align: center;
+  line-height: 500%;
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.5rem; */
 }
-
-#main-pin{
-  height: 8%;
-  width: 5%;
-  /*border: 2px solid yellow;*/
-  position: relative;
-  top: 92%;
-  left: -18%;
-}
-#img-pin{
-  height: 70%;
-  width: 80%;
+.main-win .team{
+  height: 100%;
+  width: 100%;
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
-#exp-pin{
-  height: 80%;
-  width: 120%;
-  border-radius: 10%;
-  background-color: #979da1;
-  position: absolute;
-  left: 50%;
-  top: -60%;
-  transform: translate(-50%, -10%);
-  text-align: center;
-  line-height: 150%;
-  color: white;
-  font-size: 1rem;
-  opacity: 0%;
-}
-#main-pin:hover #exp-pin{
-  opacity: 80%;
-}
 
-
-#main-mute {
+.main-win > .win > .mute{
   height: 8%;
   width: 5%;
   /* border: 2px solid yellow; */
-  position: relative;
-  top: 8%;
-  left: 65%;
+  position: absolute;
+  top: 5%;
+  left: 90%;
 }
 
-#img-mute{
+.main-win #img-mute{
   height: 40%;
   width: 40%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /*border: 1px solid yellow;*/
+  /* border: 1px solid yellow; */
 }
-#img-unmute{
+.main-win #img-unmute{
   height: 40%;
   width: 40%;
   position: absolute;
@@ -132,27 +105,31 @@
 }
 
 
-.c-switch{
+.main-win .c-win-switch{
   display: none;
 }
-.c-switch + label > #img-unmute{
+
+.main-win .c-win-switch + label > #img-unmute{
   display: none;
 }
-.c-switch + label > #img-mute{
+.main-win .c-win-switch + label > #img-mute{
   display: inline;
 }
-.c-switch:checked + label > #img-mute{
+.main-win .c-win-switch:checked + label > #img-mute{
   display: none;
 }
-.c-switch:checked + label > #img-unmute{
+.main-win .c-win-switch:checked + label > #img-unmute{
   display: inline;
 }
 
-#exp-mute{
+
+
+.main-win #exp-mute{
   height: 50%;
   width: 120%;
   border-radius: 10%;
   background-color: #979da1;
+  /* border: yellow solid 1px; */
   position: absolute;
   left: 50%;
   top: -30%;
@@ -163,7 +140,7 @@
   font-size: 1rem;
   opacity: 0%;
 }
-#exp-unmute{
+.main-win #exp-unmute{
   height: 50%;
   width: 170%;
   border-radius: 10%;
@@ -180,162 +157,78 @@
 }
 
 
-#main-mute:hover .c-switch + label  > #exp-unmute{
+.main-win .mute:hover .c-win-switch + label  > #exp-unmute{
   opacity: 80%;
 }
-#main-mute:hover .c-switch + label  > #exp-mute{
+.main-win .mute:hover .c-win-switch + label  > #exp-mute{
   opacity: 0%;
 }
-#main-mute:hover .c-switch:checked + label > #exp-unmute{
+.main-win .mute:hover .c-win-switch:checked + label > #exp-unmute{
   opacity: 0%;
 }
-#main-mute:hover .c-switch:checked + label > #exp-mute{
+.main-win .mute:hover .c-win-switch:checked + label > #exp-mute{
   opacity: 80%;
 }
 
 
 
-#main-name{
+.main-win .main-name{
   height: 8%;
   width: 5%;
-  /*border: 2px solid yellow;*/
-  position: relative;
-  top: 93%;
-  left: -23%;
+  /* border: 2px solid yellow; */
+  position: absolute;
+  top: 90%;
+  left: 5%;
   text-align: center;
   line-height: 230%;
   color: white;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
 }
 
-#more-func{
-  height: 8%;
-  width: 15%;
-  background-color: #3c4043;
-  border-radius: 25%;
+.win > .win-func{
+  height: 7%;
+  width: 20%;
+  /* border: 1px solid yellow; */
+  background-color: #979da1;
+  border-radius: 20%;
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  opacity: 0%;
 }
-
-#more-func1{
-  height: 90%;
+.win > .win-func > div{
+  height: 100%;
   width: 30%;
-  /* border: 2px solid #0097a7; */
+  border-radius: 0%;
+  /* border: 1px solid yellow; */
+  display: flex;
+  justify-content: center;
 }
-#more-func1 > #img-pin{
-  height: 90%;
+.win > .win-func > #more-func1 > #img-pin{
+  height: 60%;
   width: 30%;
-  /*border: 2px solid #0057a5;*/
   position: absolute;
-  top: 55%;
-  left: 18%;
+  top: 20%;
 }
-#more-func1 > #exp-func0-1{
+.win > .win-func > #more-func2 > #img-mute{
   height: 50%;
-  width: 30%;
-  border-radius: 10%;
-  background-color: #979da1;
-  position: absolute;
-  top: -50%;
-  left: 18%;
-  transform: translate(-50%, -10%);
-  text-align: center;
-  line-height: 100%;
-  color: white;
-  font-size: 1rem;
-  opacity: 0%;
+  width: 15%;
 }
-#more-func1:hover #exp-func0-1{
+.win-func #img-function{
+  height: 70%;
+  width: 50%;
+  position: relative;
+  top: 20%;
+}
+
+.win:hover .win-func{
   opacity: 80%;
 }
 
-#more-func2{
-  height: 90%;
-  width: 30%;
-  /*border: 2px solid #0097a7;*/
-  position: absolute;
-  top: 0%;
-  left: 33%;
-}
-#more-func2 > #img-item{
-  height: 90%;
-  width: 90%;
-  position: absolute;
-  left: 60%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-}
-#more-func2 > #img-slash{
-  height: 90%;
-  width: 90%;
-  position: absolute;
-  left: 60%;
-  top: 60%;
-  transform: translate(-50%, -50%);
-}
-#more-func2 > #exp-func0-2{
-  height: 55%;
-  width: 180%;
-  border-radius: 10%;
-  background-color: #979da1;
-  position: absolute;
-  top: -55%;
-  left: 60%;
-  transform: translate(-50%, -10%);
-  text-align: center;
-  line-height: 100%;
-  color: white;
-  font-size: 1rem;
-  opacity: 0%;
-}
-#more-func2:hover #exp-func0-2{
-  opacity: 80%;
-}
-
-#more-func3{
-  height: 90%;
-  width: 30%;
-  /* border: 2px solid #0097a7; */
-  position: absolute;
-  top: 0%;
-  left: 66%;
-}
-#more-func3 > #img-shrink{
-  height: 90%;
-  width: 90%;
-  position: absolute;
-  left: 55%;
-  top: 58%;
-  transform: translate(-50%, -50%);
-}
-#more-func3 > #exp-func0-3{
-  height: 55%;
-  width: 180%;
-  border-radius: 10%;
-  background-color: #979da1;
-  position: absolute;
-  top: -55%;
-  left: 60%;
-  transform: translate(-50%, -10%);
-  text-align: center;
-  line-height: 100%;
-  color: white;
-  font-size: 1rem;
-  opacity: 0%;
-}
-#more-func3:hover #exp-func0-3{
-  opacity: 80%;
-}
-
-#more-func{
-  opacity: 60%;
-}
-.main-win:hover
-  #more-func{
-  opacity: 100%;
+.main-win > .win > .btm-close{
+  display: none;
 }
 
 
@@ -344,10 +237,19 @@
 
 
 
-.win{
+
+
+
+
+
+
+
+
+
+.sub-win{
   height: 70%;
   width: 30%;
-  /*border: 2px solid green;*/
+  /* border: 2px solid green; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -359,7 +261,7 @@
   transform: translate(-4.5%, -5%);
 }
 
-.win > div{
+.sub-win > div{
   height: 30%;
   width: 45%;
   /*border: 1px solid yellow;*/
@@ -372,7 +274,8 @@
   font-size: 2rem;
 }
 
-#btm-m{
+
+.sub-win .mute{
   height: 16%;
   width: 14%;
   border-radius: 50%;
@@ -385,7 +288,7 @@
   color: white;
   font-size: 1rem;
 }
-#btm-name{
+.sub-win .main-name{
   height: 5%;
   width: 50%;
   /*border: 1px solid yellow;*/
@@ -397,23 +300,24 @@
   color: white;
   font-size: 0.8rem;
 }
-.win .btm-close{
+.sub-win .btm-close{
   height: 16%;
   width: 14%;
+  display: block;
   /* border: 1px solid yellow; */
   position: absolute;
   top: 5%;
   left: 5%;
 }
 
-.win .btm-close > img{
+.sub-win .btm-close > img{
   height: 60%;
   width: 50%;
   position: absolute;
   top: 5%;
   left: 5%;
 }
-.win .win-func{
+.sub-win .win-func{
   height: 15%;
   width: 40%;
   /* border: 1px solid yellow; */
@@ -449,59 +353,80 @@
   top: 20%;
 }
 
-.win div:hover .win-func{
+.sub-win div:hover .win-func{
   opacity: 80%;
 }
 
 
 
-
-
-.win-class-user{
+.sub-win .win-class-user{
   height: 50%;
   width: 40%;
-  background-color: #0097a7;
+  /* background-color: #0097a7; */
+  /* border: 1px solid yellow; */
   border-radius: 50%;
-  position: relative;
-  top: 3%;
-  left: 30%;
-  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center;
   line-height: 400%;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.8rem; */
+}
+
+.sub-win .team{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub-win #img-mute{
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* border: 1px solid yellow; */
+}
+.sub-win #img-unmute{
+  height: 40%;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
-#window3 > .win-class-user{
-  background-color: #c2175b;
-}
-#window1 > .win-class-user{
-  background-color: #ed6100;
-}
-#window4 > .win-class-user{
-  background-color: #ed6100;
-}
 
 
-.win input{
+
+
+
+.sub-win input{
   display: none;
   position: absolute;
   left: 10%;
 }
-.win input + label > #img-unmute{
+.sub-win input + label > #img-unmute{
   display: none;
 }
-.win input + label > #img-mute{
+.sub-win input + label > #img-mute{
   display: inline;
 }
-.win input:checked + label > #img-mute{
+.sub-win input:checked + label > #img-mute{
   display: none;
 }
-.win input:checked + label > #img-unmute{
+.sub-win input:checked + label > #img-unmute{
   display: inline;
 }
 
-.win #exp-mute{
+.sub-win #exp-mute{
   height: 50%;
   width: 120%;
   border-radius: 10%;
@@ -516,7 +441,7 @@
   font-size: 0.5rem;
   opacity: 0%;
 }
-.win #exp-unmute{
+.sub-win #exp-unmute{
   height: 50%;
   width: 170%;
   border-radius: 10%;
@@ -533,16 +458,16 @@
 }
 
 
-.win #btm-m:hover input + label  > #exp-unmute{
+.sub-win .mute:hover input + label  > #exp-unmute{
   opacity: 80%;
 }
-.win #btm-m:hover input + label  > #exp-mute{
+.sub-win .mute:hover input + label  > #exp-mute{
   opacity: 0%;
 }
-.win #btm-m:hover input:checked + label > #exp-unmute{
+.sub-win .mute:hover input:checked + label > #exp-unmute{
   opacity: 0%;
 }
-.win #btm-m:hover input:checked + label > #exp-mute{
+.sub-win .mute:hover input:checked + label > #exp-mute{
   opacity: 80%;
 }
 
