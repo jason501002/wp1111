@@ -47,11 +47,14 @@ const useWordle = (solution) => {
         // TODO 4: Check each wordbox's color in `curGuess` and update `guess`, `turn` and `curGuess`
         // Hint: check green first, and then check yellow.
 
-        let temp = set
-        temp.map((i) =>  {
-            temp[i] = {char:curGuess[i], color:'gray'}
+        let temp = [...Array(6)]
+        let idx = 0
+        temp.map(() =>  {
+            temp[idx] = {char: curGuess[idx], color:'gray'}
+            idx += 1
+            // console.log("test: ", i, temp[i])
         })
-        console.log(temp)
+        // console.log("test:  ", temp)
 
         if(curGuess[0] === solution[0]){
             temp[0] = {char:curGuess[0], color:'green'}
@@ -81,11 +84,13 @@ const useWordle = (solution) => {
 
 
         // add the formatted guess generated into guesses.
+        
         let temp_guess = guesses
         temp_guess[turn] = temp
         setGuesses(temp_guess)
+        console.log("temphaha", guesses[0][0].char)
 
-        turn += 1
+        setTurn(turn + 1)
 
         // set curGuess to default
         setCurGuess("")
