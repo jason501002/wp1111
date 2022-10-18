@@ -1,0 +1,580 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 18,
+    "passes": 10,
+    "pending": 0,
+    "failures": 8,
+    "start": "2022-10-18T03:25:19.304Z",
+    "end": "2022-10-18T03:25:25.490Z",
+    "duration": 6186,
+    "testsRegistered": 18,
+    "passPercent": 55.55555555555556,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "248fd9db-7cd3-4107-a7c7-b0f37511b8d1",
+      "title": "",
+      "fullFile": "cypress/e2e/public.cy.js",
+      "file": "cypress/e2e/public.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e4765f5-58be-4610-8ea9-ecd762dcf986",
+          "title": "Hack#1 Public Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "3e1d13fa-25ad-450a-8177-d23b3c145986",
+              "title": "Problem 1",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "1-1 Keyboard-container exists and the third row is correct",
+                  "fullTitle": "Hack#1 Public Test Problem 1 1-1 Keyboard-container exists and the third row is correct",
+                  "timedOut": null,
+                  "duration": 253,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Keyboard-container').should('be.visible');",
+                  "err": {},
+                  "uuid": "bc4c402e-4e63-4574-901b-6c8deed16f32",
+                  "parentUUID": "3e1d13fa-25ad-450a-8177-d23b3c145986",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "1-2-1 Keyboard-container first row correct",
+                  "fullTitle": "Hack#1 Public Test Problem 1 1-2-1 Keyboard-container first row correct",
+                  "timedOut": null,
+                  "duration": 149,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const chars = 'q w e r t y u i o p'.split(' ');\ncy.get('.Keyboard-container > #KBrow_1').should('have.class', 'Keyboard-row').children().should('have.length', 10);\ncy.get('.Keyboard-container > #KBrow_1').children().each(($el, index) => {\n  cy.wrap($el).should('have.text', chars[index]).should('have.id', 'char_' + chars[index]);\n});",
+                  "err": {},
+                  "uuid": "8e1f4621-3ef8-4e14-ba69-9059d450c360",
+                  "parentUUID": "3e1d13fa-25ad-450a-8177-d23b3c145986",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "1-2-2 Keyboard-container second row correct",
+                  "fullTitle": "Hack#1 Public Test Problem 1 1-2-2 Keyboard-container second row correct",
+                  "timedOut": null,
+                  "duration": 85,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const chars = 'a s d f g h j k l'.split(' ');\ncy.get('.Keyboard-container > #KBrow_2').should('have.class', 'Keyboard-row').children().should('have.length', 9);\ncy.get('.Keyboard-container > #KBrow_2').children().each(($el, index) => {\n  cy.wrap($el).should('have.text', chars[index]).should('have.id', 'char_' + chars[index]);\n});",
+                  "err": {},
+                  "uuid": "1c4c48fa-2927-4acc-a102-4f01b4924b34",
+                  "parentUUID": "3e1d13fa-25ad-450a-8177-d23b3c145986",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "bc4c402e-4e63-4574-901b-6c8deed16f32",
+                "8e1f4621-3ef8-4e14-ba69-9059d450c360",
+                "1c4c48fa-2927-4acc-a102-4f01b4924b34"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 487,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "73dcf921-33b8-42c2-aa1b-cf0a6f8f61ad",
+              "title": "Problem 2",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "2-1 Board-container exists",
+                  "fullTitle": "Hack#1 Public Test Problem 2 2-1 Board-container exists",
+                  "timedOut": null,
+                  "duration": 48,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Board-container').should('be.visible');",
+                  "err": {},
+                  "uuid": "d6fc36cf-ccdb-41aa-9cb4-1b64692c2087",
+                  "parentUUID": "73dcf921-33b8-42c2-aa1b-cf0a6f8f61ad",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "2-2-1 There are six Row-containers",
+                  "fullTitle": "Hack#1 Public Test Problem 2 2-2-1 There are six Row-containers",
+                  "timedOut": null,
+                  "duration": 47,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Board-container > .Row-container').should('have.length', 6);",
+                  "err": {},
+                  "uuid": "ec64cd39-2220-433a-bd14-195331220020",
+                  "parentUUID": "73dcf921-33b8-42c2-aa1b-cf0a6f8f61ad",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "2-2-2 CurRow is at the first row",
+                  "fullTitle": "Hack#1 Public Test Problem 2 2-2-2 CurRow is at the first row",
+                  "timedOut": null,
+                  "duration": 44,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Board-container > .Row-container').children().eq(0).should('have.class', 'current');",
+                  "err": {},
+                  "uuid": "f013a531-cf85-4ed6-a6ba-e85e4f12e1e8",
+                  "parentUUID": "73dcf921-33b8-42c2-aa1b-cf0a6f8f61ad",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "d6fc36cf-ccdb-41aa-9cb4-1b64692c2087",
+                "ec64cd39-2220-433a-bd14-195331220020",
+                "f013a531-cf85-4ed6-a6ba-e85e4f12e1e8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 139,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d01d9a2b-ba6d-48f4-b4dc-7f4aac4f4ab2",
+              "title": "Problem 3",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "3-1 curGuess is rendered onto CurRow",
+                  "fullTitle": "Hack#1 Public Test Problem 3 3-1 curGuess is rendered onto CurRow",
+                  "timedOut": null,
+                  "duration": 327,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('body').type('{a}');\ncy.get('.Row-wrapper.current').children().eq(0).should('have.text', 'a').and('have.id', '0-0');\ncy.get('body').type('{b}').type('{c}').type('{e}');\ncy.get('.Row-wrapper.current').children().eq(1).should('have.text', 'b').and('have.id', '0-1');\ncy.get('.Row-wrapper.current').children().eq(2).should('have.text', 'c').and('have.id', '0-2');\ncy.get('.Row-wrapper.current').children().eq(3).should('have.text', 'e').and('have.id', '0-3');",
+                  "err": {},
+                  "uuid": "13ce0d59-1de3-4ec4-b5ed-007caab118a1",
+                  "parentUUID": "d01d9a2b-ba6d-48f4-b4dc-7f4aac4f4ab2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "3-2 Type more than 5 letters",
+                  "fullTitle": "Hack#1 Public Test Problem 3 3-2 Type more than 5 letters",
+                  "timedOut": null,
+                  "duration": 449,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const test = ['a', 'b', 'c', 'd', 'e', 'f'];\nfor (let i = 0; i < test.length; i += 1) {\n  cy.get('body').type(`{${test[i]}}`);\n}\ncy.get('.Row-wrapper.current').children().each(($el, index) => {\n  cy.wrap($el).should('have.text', test[index]).and('have.id', '0-' + index);\n});",
+                  "err": {},
+                  "uuid": "4657c0e2-aedb-4c71-a756-9a65626df0e5",
+                  "parentUUID": "d01d9a2b-ba6d-48f4-b4dc-7f4aac4f4ab2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "3-3 Backspace is working",
+                  "fullTitle": "Hack#1 Public Test Problem 3 3-3 Backspace is working",
+                  "timedOut": null,
+                  "duration": 525,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const test = ['z', 'x', 'c', 'v', 'backspace', 'b', 'n'];\nconst ans = ['z', 'x', 'c', 'b', 'n'];\nfor (let i = 0; i < test.length; i += 1) {\n  cy.get('body').type(`{${test[i]}}`);\n}\ncy.get('.Row-wrapper.current').children().each(($el, index) => {\n  cy.wrap($el).should('have.text', ans[index]);\n});",
+                  "err": {},
+                  "uuid": "9b565279-8cab-40c6-8934-c8fcb7937dba",
+                  "parentUUID": "d01d9a2b-ba6d-48f4-b4dc-7f4aac4f4ab2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "3-4 Filled wordboxes should have class filled",
+                  "fullTitle": "Hack#1 Public Test Problem 3 3-4 Filled wordboxes should have class filled",
+                  "timedOut": null,
+                  "duration": 217,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.Row-wrapper.current').children().each(($el, index) => {\n  cy.wrap($el).not('have.class', 'filled');\n});\ncy.get('body').type('{z}').type('{x}');\ncy.get('.Row-wrapper.current').children().each(($el, index) => {\n  if (index < 2) {\n    if (index == 0) cy.wrap($el).should('have.text', 'z').and('have.class', 'filled');else if (index == 1) cy.wrap($el).should('have.text', 'x').and('have.class', 'filled');\n  } else {\n    cy.wrap($el).not('have.class', 'filled');\n    cy.wrap($el).should('have.text', '');\n  }\n});",
+                  "err": {},
+                  "uuid": "7902acc8-584d-45a1-94a4-adf0c32ce15e",
+                  "parentUUID": "d01d9a2b-ba6d-48f4-b4dc-7f4aac4f4ab2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "13ce0d59-1de3-4ec4-b5ed-007caab118a1",
+                "4657c0e2-aedb-4c71-a756-9a65626df0e5",
+                "9b565279-8cab-40c6-8934-c8fcb7937dba",
+                "7902acc8-584d-45a1-94a4-adf0c32ce15e"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1518,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "73ddc483-3c11-4792-a95e-a5b6617f377e",
+              "title": "Problem 4",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "4-1 CurRow change after pressing enter",
+                  "fullTitle": "Hack#1 Public Test Problem 4 4-1 CurRow change after pressing enter",
+                  "timedOut": null,
+                  "duration": 384,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const test = ['a', 'b', 'c', 'd', 'e', 'enter'];\nfor (let i = 0; i < test.length; i += 1) {\n  cy.get('body').type(`{${test[i]}}`);\n}\ncy.get('.Board-container').children().eq(0).get('.Row-wrapper').not('have.class', 'current');\ncy.get('.Board-container').children().eq(1).get('.Row-wrapper').should('have.class', 'current');",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "839f4215-f3ab-4d55-b014-6a08c0f48a1d",
+                  "parentUUID": "73ddc483-3c11-4792-a95e-a5b6617f377e",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "4-2 Green rendered correctly (only one line)",
+                  "fullTitle": "Hack#1 Public Test Problem 4 4-2 Green rendered correctly (only one line)",
+                  "timedOut": null,
+                  "duration": 404,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const test = ['m', 'a', 'n', 'a', 's', 'enter'];\nconst answer = ['green', 'grey', 'green', 'grey', 'green'];\nfor (let i = 0; i < test.length; i += 1) {\n  cy.get('body').type(`{${test[i]}}`);\n}\ncy.get('.Board-container > .Row-container > .Row-wrapper').eq(0).children().each(($el, index) => {\n  cy.wrap($el).should('have.class', answer[index]).and('have.text', test[index]);\n});",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "1d7c04f3-cb1d-4d6b-9283-de0329eea557",
+                  "parentUUID": "73ddc483-3c11-4792-a95e-a5b6617f377e",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "4-3 Green and yellow rendered correctly (only one line)",
+                  "fullTitle": "Hack#1 Public Test Problem 4 4-3 Green and yellow rendered correctly (only one line)",
+                  "timedOut": null,
+                  "duration": 383,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const test = ['a', 'i', 'u', 'b', 'm', 'enter'];\nconst answer = ['grey', 'green', 'yellow', 'grey', 'yellow'];\nfor (let i = 0; i < test.length; i += 1) {\n  cy.get('body').type(`{${test[i]}}`);\n}\ncy.get('.Board-container > .Row-container > .Row-wrapper').eq(0).children().each(($el, index) => {\n  cy.wrap($el).should('have.class', answer[index]).and('have.text', test[index]);\n});",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "4fdbdffc-a080-439e-b774-0630cb4e4701",
+                  "parentUUID": "73ddc483-3c11-4792-a95e-a5b6617f377e",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "4-4 Multiple Lines Test",
+                  "fullTitle": "Hack#1 Public Test Problem 4 4-4 Multiple Lines Test",
+                  "timedOut": null,
+                  "duration": 375,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tests = [['z', 'x', 'c', 'v', 'b', 'enter'], ['m', 'a', 'b', 'c', 'u', 'enter'], ['b', 'a', 'n', 'f', 's', 'enter'], ['m', 'u', 'n', 'a', 's', 'enter'], ['m', 'i', 'n', 'u', 's', 'enter']];\nconst answers = [['grey', 'grey', 'grey', 'grey', 'grey'], ['green', 'grey', 'grey', 'grey', 'yellow'], ['grey', 'grey', 'green', 'grey', 'green'], ['green', 'yellow', 'green', 'grey', 'green'], ['green', 'green', 'green', 'green', 'green']];\nfor (let line = 0; line < tests.length; line += 1) {\n  for (let i = 0; i < tests[0].length; i += 1) {\n    cy.get('body').type(`{${tests[line][i]}}`);\n  }\n}\ncy.get('.Board-container').children().each(($el, line) => {\n  if (line < answers.length) {\n    cy.wrap($el).children().eq(0).children().each(($el, i) => {\n      cy.wrap($el).should('have.text', tests[line][i]).should('have.class', answers[line][i]).should('have.id', line + '-' + i);\n    });\n  }\n});",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "7ab9e176-8489-4860-9722-5991087c3777",
+                  "parentUUID": "73ddc483-3c11-4792-a95e-a5b6617f377e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "839f4215-f3ab-4d55-b014-6a08c0f48a1d",
+                "1d7c04f3-cb1d-4d6b-9283-de0329eea557",
+                "4fdbdffc-a080-439e-b774-0630cb4e4701",
+                "7ab9e176-8489-4860-9722-5991087c3777"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 1546,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "bf971a79-86d2-4b0f-9dfa-40b7fddac80e",
+              "title": "Problem 5",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "5-1 Render green correctly",
+                  "fullTitle": "Hack#1 Public Test Problem 5 5-1 Render green correctly",
+                  "timedOut": null,
+                  "duration": 379,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const test = ['m', 'a', 'n', 'b', 'c', 'enter'];\nfor (let i = 0; i < test.length; i += 1) {\n  cy.get('body').type(`{${test[i]}}`);\n}\ncy.get('.Keyboard-container > .Keyboard-row > #char_n').should('have.class', 'green').and('have.text', 'n');\ncy.get('.Keyboard-container > .Keyboard-row > #char_m').should('have.class', 'green').and('have.text', 'm');\ncy.get('.Keyboard-container > .Keyboard-row > #char_a').should('have.text', 'a').not('have.class', 'green').not('have.class', 'yellow');\ncy.get('.Keyboard-container > .Keyboard-row > #char_b').should('have.text', 'b').not('have.class', 'green').not('have.class', 'yellow');\ncy.get('.Keyboard-container > .Keyboard-row > #char_c').should('have.text', 'c').not('have.class', 'green').not('have.class', 'yellow');",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "c4c10d94-9f12-4943-9036-26b269e2b4d4",
+                  "parentUUID": "bf971a79-86d2-4b0f-9dfa-40b7fddac80e",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "5-2 Multiple Lines",
+                  "fullTitle": "Hack#1 Public Test Problem 5 5-2 Multiple Lines",
+                  "timedOut": null,
+                  "duration": 469,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tests = [['a', 'b', 'c', 'e', 'f', 'enter'], ['n', 'b', 'c', 'e', 'f', 'enter'], ['m', 'n', 'c', 'e', 'f', 'enter'], ['m', 'u', 'n', 'e', 'f', 'enter'], ['m', 'u', 'n', 's', 'i', 'enter'], ['a', 'b', 'c', 'e', 'f', 'enter']]; // key match with \"w i n d y\"\nconst key_match = [['', '', '', '', ''], ['', '', 'yellow', '', ''], ['green', '', 'yellow', '', ''], ['green', '', 'green', 'yellow', ''], ['green', 'yellow', 'green', 'yellow', 'yellow'], ['green', 'yellow', 'green', 'yellow', 'yellow']];\nfor (let line = 0; line < tests.length; line += 1) {\n  for (let i = 0; i < tests[0].length; i += 1) {\n    cy.get('body').type(`{${tests[line][i]}}`);\n  }\n  for (let i = 0; i < KBrow_1.length; i++) {\n    if (!solList.includes(KBrow_1[i])) {\n      cy.get('.Keyboard-container > #KBrow_1 > #char_' + KBrow_1[i]).should('have.text', KBrow_1[i]).not('have.class', 'green').not('have.class', 'yellow');\n    } else {\n      if (key_match[line][solList.indexOf(KBrow_1[i])]) {\n        cy.get('.Keyboard-container > #KBrow_1 > #char_' + KBrow_1[i]).should('have.text', KBrow_1[i]).and('have.class', key_match[line][solList.indexOf(KBrow_1[i])]);\n      } else {\n        cy.get('.Keyboard-container > #KBrow_1 > #char_' + KBrow_1[i]).should('have.text', KBrow_1[i]).not('have.class', 'green').not('have.class', 'yellow');\n      }\n    }\n  }\n  for (let i = 0; i < KBrow_2.length; i++) {\n    if (!solList.includes(KBrow_2[i])) {\n      cy.get('.Keyboard-container > #KBrow_2 > #char_' + KBrow_2[i]).should('have.text', KBrow_2[i]).not('have.class', 'green').not('have.class', 'yellow');\n    } else {\n      if (key_match[line][solList.indexOf(KBrow_2[i])]) {\n        cy.get('.Keyboard-container > #KBrow_2 > #char_' + KBrow_2[i]).should('have.text', KBrow_2[i]).and('have.class', key_match[line][solList.indexOf(KBrow_2[i])]);\n      } else {\n        cy.get('.Keyboard-container > #KBrow_2 > #char_' + KBrow_2[i]).should('have.text', KBrow_2[i]).not('have.class', 'green').not('have.class', 'yellow');\n      }\n    }\n  }\n  for (let i = 0; i < KBrow_3.length; i++) {\n    if (!solList.includes(KBrow_3[i])) {\n      cy.get('.Keyboard-container > #KBrow_3 > #char_' + KBrow_3[i]).should('have.text', KBrow_3[i]).not('have.class', 'green').not('have.class', 'yellow');\n    } else {\n      if (key_match[line][solList.indexOf(KBrow_3[i])]) {\n        cy.get('.Keyboard-container > #KBrow_3 > #char_' + KBrow_3[i]).should('have.text', KBrow_3[i]).and('have.class', key_match[line][solList.indexOf(KBrow_3[i])]);\n      } else {\n        cy.get('.Keyboard-container > #KBrow_3 > #char_' + KBrow_3[i]).should('have.text', KBrow_3[i]).not('have.class', 'green').not('have.class', 'yellow');\n      }\n    }\n  }\n}",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "360350a2-4e11-4b93-b992-453db8a9cc33",
+                  "parentUUID": "bf971a79-86d2-4b0f-9dfa-40b7fddac80e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "c4c10d94-9f12-4943-9036-26b269e2b4d4",
+                "360350a2-4e11-4b93-b992-453db8a9cc33"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 848,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "418b425e-42ff-485b-9e18-0875ea421850",
+              "title": "Problem 6",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "6-1 Show winning info",
+                  "fullTitle": "Hack#1 Public Test Problem 6 6-1 Show winning info",
+                  "timedOut": null,
+                  "duration": 397,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tests = [['a', 'b', 'c', 'e', 'f', 'enter'], ['n', 'b', 'c', 'e', 'f', 'enter'], ['m', 'n', 'c', 'e', 'f', 'enter'], ['m', 'u', 'n', 's', 'i', 'enter'], ['m', 'i', 'n', 'u', 's', 'enter']];\nfor (let line = 0; line < tests.length; line += 1) {\n  for (let i = 0; i < tests[0].length; i += 1) {\n    cy.get('body').type(`{${tests[line][i]}}`);\n  }\n  if (line != tests.length - 1) {\n    cy.get('.Wordle-lose').should('have.class', 'Hidden');\n  }\n}\ncy.get('.Wordle-win').should('have.text', 'You win!!!!');",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "753f13f3-1f8b-40cf-8587-f25a4bd71323",
+                  "parentUUID": "418b425e-42ff-485b-9e18-0875ea421850",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "6-2 Show losing info",
+                  "fullTitle": "Hack#1 Public Test Problem 6 6-2 Show losing info",
+                  "timedOut": null,
+                  "duration": 407,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "const tests = [['a', 'b', 'c', 'e', 'f', 'enter'], ['n', 'b', 'c', 'e', 'f', 'enter'], ['m', 'n', 'c', 'e', 'f', 'enter'], ['m', 'u', 'n', 'e', 'f', 'enter'], ['m', 'u', 'n', 's', 'i', 'enter'], ['a', 'b', 'c', 'e', 'f', 'enter']];\nfor (let line = 0; line < tests.length; line += 1) {\n  for (let i = 0; i < tests[0].length; i += 1) {\n    cy.get('body').type(`{${tests[line][i]}}`);\n  }\n  if (line != tests.length - 1) {\n    cy.get('.Wordle-lose').should('have.class', 'Hidden');\n  }\n}\ncy.get('.Wordle-lose').not('have.class', 'Hidden').should('have.text', 'You lose!!!! The answer is ' + solution + '.');",
+                  "err": {
+                    "message": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                    "estack": "TypeError: The following error originated from your application code, not from Cypress.\n\n  > Assignment to constant variable.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at handleEnter (http://localhost:8080/static/js/bundle.js:942:10)\n    at handleKeyup (http://localhost:8080/static/js/bundle.js:974:26)",
+                    "diff": null
+                  },
+                  "uuid": "928745cc-ac28-4a1c-b019-618e550a0bb2",
+                  "parentUUID": "418b425e-42ff-485b-9e18-0875ea421850",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "753f13f3-1f8b-40cf-8587-f25a4bd71323",
+                "928745cc-ac28-4a1c-b019-618e550a0bb2"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 804,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
