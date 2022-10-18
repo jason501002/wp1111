@@ -11,7 +11,7 @@ import React from 'react';
 
 
 const Row = ({ guess, rowIdx }) => {
-    console.log(guess)
+    // console.log(guess)
     let idx = 0
     let ans
     if(guess[rowIdx] != undefined) {

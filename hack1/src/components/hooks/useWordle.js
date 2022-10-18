@@ -50,7 +50,7 @@ const useWordle = (solution) => {
         let temp = [...Array(6)]
         let idx = 0
         temp.map(() =>  {
-            temp[idx] = {char: curGuess[idx], color:'gray'}
+            temp[idx] = {char: curGuess[idx], color:'gray', used:0}
             idx += 1
             // console.log("test: ", i, temp[i])
         })
@@ -60,28 +60,46 @@ const useWordle = (solution) => {
             temp[0] = {char:curGuess[0], color:'green'}
             Setset(temp)
             temp[0].color = 'green'
+            temp[0].used = 1
         }
         if(curGuess[1] === solution[1]){
             temp[1] = {char:curGuess[1], color:'green'}
             Setset(temp)
             temp[1].color = 'green'
+            temp[1].used = 1
         }
         if(curGuess[2] === solution[2]){
             temp[2] = {char:curGuess[2], color:'green'}
             Setset(temp)
             temp[2].color = 'green'
+            temp[2].used = 1
         }
         if(curGuess[3] === solution[3]){
             temp[3] = {char:curGuess[3], color:'green'}
             Setset(temp)
             temp[3].color = 'green'
+            temp[3].used = 1
         }
         if(curGuess[4] === solution[4]){
             temp[4] = {char:curGuess[4], color:'green'}
             Setset(temp)
             temp[4].color = 'green'
+            temp[4].used = 1
         }
-
+        idx = 0
+        // console.log(solution)
+        temp.map(() => {
+            let idxx = 0
+            if(temp[idx].used === 0){
+                temp.map(() => {
+                    if(idxx > 4) return
+                    if(temp[idxx].char === solution[idx] && temp[idxx].used === 0) temp[idx].color = 'yellow'
+                    temp[idxx].used = 1
+                    idxx += 1
+                })
+            }
+            idx += 1
+        })
 
         // add the formatted guess generated into guesses.
         
